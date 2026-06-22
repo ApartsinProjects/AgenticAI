@@ -7,10 +7,10 @@ generic; this file is the only place where content specific to THIS book lives.
 ## Book Identity
 
 - **Title**: Building Agentic AI: From Goals to Autonomous Systems
-- **Subtitle**: A Practitioner's Guide to Agent Foundations, Reinforcement Learning, LLM Agents, and Autonomous Systems
+- **Subtitle**: Deep Theory and Production Code for Agent Foundations, Reinforcement Learning, LLM Agents, and Autonomous Systems
 - **Series**: Hands-On AI Science
 - **Authors**: Alexander Apartsin & Yehudit Aperstein
-- **Target Audience**: Software engineers and graduate students with Python experience and basic probability and linear algebra. Prior deep learning knowledge (at the level of Building Language AI or Building Vision AI) assumed for Parts III and IV.
+- **Target Audience**: Engineers and researchers with Python experience and basic probability and linear algebra who want rigorous theory and production-ready code in equal measure. Prior deep learning knowledge (at the level of Building Language AI or Building Vision AI) assumed for Parts III and IV.
 - **Output Format**: HTML chapter files linking to the shared stylesheet `styles/book.css`
 - **Author/Footer line**: `© 2026 Alexander Apartsin · <a href="../../toc.html">Contents</a>` (adjust relative depth per file location)
 - **Edition line for footers**: `Building Agentic AI: From Goals to Autonomous Systems, First Edition`

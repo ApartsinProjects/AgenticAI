@@ -31,13 +31,13 @@ The central question: how can an AI system perceive, reason, plan, decide, act, 
 
 Building Agentic AI is a practitioner's guide to autonomous intelligent systems in 39 chapters across four parts: foundations of agency, learning agents, LLM-powered agents, and multi-agent and deployed systems. Every core idea is built from first principles and then shown with the modern library that turns it into practical code.
 
-The book unifies classical AI planning and decision theory, reinforcement learning, LLM-based agent frameworks, multi-agent systems, and production deployment. It serves two audiences simultaneously: graduate students and researchers (formal theory, complexity analysis, benchmark reproduction, open-problem pointers) and software engineers (working Python recipes, canonical stack, AI-assisted extension patterns).
+The book unifies classical AI planning and decision theory, reinforcement learning, LLM-based agent frameworks, multi-agent systems, and production deployment. Every chapter pairs rigorous theory with production-ready code: formal definitions and complexity analysis sit alongside working Python recipes and canonical library patterns, so readers who want to understand agents deeply and readers who want to ship them fast can follow the same text.
 
 A recurring narrative runs through all four parts: concepts introduced in classical form return in learned form. The utility function (Ch 3) becomes the reward signal (Ch 7); the search tree (Ch 4) becomes Monte Carlo Tree Search and then chain-of-thought reasoning (Ch 18); the knowledge base (Ch 5) becomes the retrieval-augmented memory (Ch 20); tool use in classical planners (Ch 4) returns in LLM function calling (Ch 19) and then in software engineering agents (Ch 31). Readers are invited to follow these arcs through the text.
 
 ## Target Audience
 
-Software engineers and graduate students with Python experience and basic probability and linear algebra. Prior knowledge of deep learning (at the level of Building Language AI or Building Vision AI) is assumed for Parts III and IV; the appendices cover any remaining prerequisites.
+Engineers and researchers with Python experience and basic probability and linear algebra who want to understand autonomous systems from first principles and build them in production code. Prior knowledge of deep learning (at the level of Building Language AI or Building Vision AI) is assumed for Parts III and IV; the appendices cover any remaining prerequisites.
 
 ## Canonical Software Stack
 
