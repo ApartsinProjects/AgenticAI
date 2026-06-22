@@ -3,98 +3,118 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Table of contents for Building Agentic AI: From Goals to Autonomous Systems." name="description"/>
-<title>Contents | Building Agentic AI</title>
+<meta content="Detailed table of contents for Building Agentic AI: From Goals to Autonomous Systems." name="description"/>
+<title>Contents | Building Agentic AI: From Goals to Autonomous Systems</title>
 <link href="styles/book.css" rel="stylesheet"/>
+<style>
+/* Page-specific overrides for the ToC. All base styles come from styles/book.css.
+   Overrides exist because this ToC extends the standard toc with visible chapter
+   subtitles and directory paths. */
+.toc-draft-note { max-width: 1080px; margin: 1.25rem auto 0; padding: 0 1.5rem; font-family: sans-serif; font-size: 0.8rem; color: #5a626c; text-align: center; }
+.toc-main { max-width: 1080px; }
+.toc-chapter { padding: 0.65rem 0.75rem; }
+.toc-chapter-head { display: grid; grid-template-columns: 2rem 1fr; gap: 0 0.65rem; align-items: start; margin-bottom: 0.45rem; }
+.toc-chapter-head .toc-chapter-num { margin-top: 0.1rem; }
+.toc-chapter-subtitle { display: block; font-size: 0.78rem; font-style: italic; color: #5a626c; line-height: 1.4; margin-top: 0.15rem; }
+.toc-chapter-dir { display: none; margin-left: 2.65rem; font-family: Consolas, Menlo, monospace; font-size: 0.66rem; color: #9aa3b2; word-break: break-all; }
+.toc-card-link { color: inherit; text-decoration: none; }
+.toc-card-link:hover .toc-chapter-title { color: #e94560; }
+.toc-part-title a { color: #ffffff; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5); }
+.toc-part-title a:hover { color: rgba(255,255,255,0.85); }
+</style>
 <script defer="" src="scripts/book.js"></script>
+<link href="pagefind/pagefind-ui.css" rel="stylesheet"/>
+<script defer="" src="pagefind/pagefind-ui.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="chapter-header">
 <nav class="header-nav">
-<a class="book-title-link" href="index.html">Building Agentic AI</a>
-<a aria-current="page" class="toc-link" href="toc.html" title="Table of Contents"><span class="toc-icon">&#9776;</span> Contents</a>
+<a class="book-title-link" href="index.html">Building Agentic AI: From Goals to Autonomous Systems</a>
+<span aria-current="page" class="toc-link" title="Table of Contents"><span class="toc-icon">&#9776;</span> Contents</span>
 </nav>
+<div class="header-search"><div id="search"></div></div>
 <h1>Table of Contents</h1>
-<p class="chapter-subtitle">First Edition, 2026</p>
+<p class="chapter-subtitle">A practitioner's guide to agent foundations, reinforcement learning, LLM agents, multi-agent systems, and autonomous deployment.</p>
+<p class="chapter-subtitle">First Edition &#183; 2026</p>
 </header>
-<main id="main-content" class="content toc-main">
+<p class="toc-draft-note">4 parts &#183; 39 chapters, plus front matter, 5 appendices, and a capstone.</p>
+<main class="content toc-main" id="main-content">
 
 <section class="toc-part toc-front-matter" id="front-matter">
 <header class="toc-part-header">
-<h2 class="toc-part-title"><span class="toc-part-prefix">Front Matter</span></h2><span class="toc-part-count">5 entries</span>
+<h2 class="toc-part-title"><span class="toc-part-prefix">Front Matter</span> <span class="toc-part-sep">&#183;</span> <a href="front-matter/foreword.html">Why This Book Exists</a></h2><span class="toc-part-count">5 entries</span>
 </header>
 <ol class="toc-chapter-list">
-<li class="toc-chapter"><a href="front-matter/foreword.html"><span class="toc-chapter-num">F1</span><span class="toc-chapter-title">Why This Book Exists</span></a></li>
-<li class="toc-chapter"><a href="front-matter/what-this-book-covers.html"><span class="toc-chapter-num">F2</span><span class="toc-chapter-title">What This Book Covers</span></a></li>
-<li class="toc-chapter"><a href="front-matter/how-to-use.html"><span class="toc-chapter-num">F3</span><span class="toc-chapter-title">How to Use This Book</span></a></li>
-<li class="toc-chapter"><a href="front-matter/about-authors.html"><span class="toc-chapter-num">F4</span><span class="toc-chapter-title">About the Authors</span></a></li>
-<li class="toc-chapter"><a href="front-matter/about-the-series.html"><span class="toc-chapter-num">F5</span><span class="toc-chapter-title">About the Hands-On AI Science Series</span></a></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">F1</span><div><a class="toc-card-link" href="front-matter/foreword.html"><span class="toc-chapter-title">Why This Book Exists</span></a><span class="toc-chapter-subtitle">Agency spans sixty years of AI ideas, from STRIPS planners to GPT-powered coding agents; this book teaches them as one connected story.</span></div></div><code class="toc-chapter-dir">front-matter/foreword.html</code></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">F2</span><div><a class="toc-card-link" href="front-matter/what-this-book-covers.html"><span class="toc-chapter-title">What This Book Covers</span></a><span class="toc-chapter-subtitle">The four-part arc: foundations, learning, LLM agents, and deployed systems.</span></div></div><code class="toc-chapter-dir">front-matter/what-this-book-covers.html</code></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">F3</span><div><a class="toc-card-link" href="front-matter/how-to-use.html"><span class="toc-chapter-title">How to Use This Book</span></a><span class="toc-chapter-subtitle">Reading paths for engineers, researchers, and self-study learners; how the parts depend on each other.</span></div></div><code class="toc-chapter-dir">front-matter/how-to-use.html</code></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">F4</span><div><a class="toc-card-link" href="front-matter/about-authors.html"><span class="toc-chapter-title">About the Authors</span></a><span class="toc-chapter-subtitle">Who wrote this book and how.</span></div></div><code class="toc-chapter-dir">front-matter/about-authors.html</code></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">F5</span><div><a class="toc-card-link" href="front-matter/about-the-series.html"><span class="toc-chapter-title">About the Hands-On AI Science Series</span></a><span class="toc-chapter-subtitle">The seven-book Hands-On AI Science series and where this volume fits.</span></div></div><code class="toc-chapter-dir">front-matter/about-the-series.html</code></li>
 </ol>
 </section>
 
 <section class="toc-part" data-part-num="1" id="part-1">
 <header class="toc-part-header">
-<h2 class="toc-part-title"><span class="toc-part-prefix">Part I</span> <span class="toc-part-sep">&#183;</span> Foundations of Agency</h2>
-<span class="toc-part-count">7 chapters</span>
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part I</span> <span class="toc-part-sep">&#183;</span> <a href="part-1-foundations-of-agency/index.html">Foundations of Agency</a></h2><span class="toc-part-count">7 chapters</span>
 <p class="toc-part-subtitle">What agents are, how they represent preferences as utility, how they plan toward goals, and how they reason with knowledge and uncertainty. Closes with the classical agent tooling stack.</p>
 </header>
 <ol class="toc-chapter-list">
 
 <li class="toc-chapter">
-<a href="part-1-foundations-of-agency/module-00-agent-development-stack/index.html">
-<span class="toc-chapter-num">0</span>
-<span class="toc-chapter-title">The Agent Development Stack</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">0</span><div>
+<a class="toc-card-link" href="part-1-foundations-of-agency/module-00-agent-development-stack/index.html"><span class="toc-chapter-title">The Agent Development Stack</span></a>
 <span class="toc-chapter-subtitle">Set up Python, Gymnasium, the Anthropic SDK, LangGraph, Qdrant, and Stable-Baselines3, then wire them into a minimal agent loop that runs end-to-end by the chapter's close.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-1-foundations-of-agency/module-00-agent-development-stack/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-1-foundations-of-agency/module-01-what-is-an-agent/index.html">
-<span class="toc-chapter-num">1</span>
-<span class="toc-chapter-title">What Is an Agent?</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">1</span><div>
+<a class="toc-card-link" href="part-1-foundations-of-agency/module-01-what-is-an-agent/index.html"><span class="toc-chapter-title">What Is an Agent?</span></a>
 <span class="toc-chapter-subtitle">The PEAS framework, the agent-environment loop, rationality, and the taxonomy of task environments define what it means for a system to act intelligently in the world.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-1-foundations-of-agency/module-01-what-is-an-agent/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-1-foundations-of-agency/module-02-agent-architectures/index.html">
-<span class="toc-chapter-num">2</span>
-<span class="toc-chapter-title">Agent Architectures</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">2</span><div>
+<a class="toc-card-link" href="part-1-foundations-of-agency/module-02-agent-architectures/index.html"><span class="toc-chapter-title">Agent Architectures</span></a>
 <span class="toc-chapter-subtitle">Reactive, deliberative, and hybrid architectures; the BDI model; subsumption; the sense-plan-act loop. The design choices here echo across every chapter that follows.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-1-foundations-of-agency/module-02-agent-architectures/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-1-foundations-of-agency/module-03-utility-decision-theory/index.html">
-<span class="toc-chapter-num">3</span>
-<span class="toc-chapter-title">Utility and Decision Theory</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">3</span><div>
+<a class="toc-card-link" href="part-1-foundations-of-agency/module-03-utility-decision-theory/index.html"><span class="toc-chapter-title">Utility and Decision Theory</span></a>
 <span class="toc-chapter-subtitle">Expected utility, von Neumann-Morgenstern axioms, risk attitudes, and multi-attribute utility. The utility function introduced here becomes the reward signal in Chapter 7.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-1-foundations-of-agency/module-03-utility-decision-theory/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-1-foundations-of-agency/module-04-planning-goal-pursuit/index.html">
-<span class="toc-chapter-num">4</span>
-<span class="toc-chapter-title">Planning as Goal Pursuit</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">4</span><div>
+<a class="toc-card-link" href="part-1-foundations-of-agency/module-04-planning-goal-pursuit/index.html"><span class="toc-chapter-title">Planning as Goal Pursuit</span></a>
 <span class="toc-chapter-subtitle">Classical planning in STRIPS and PDDL, state-space search, A*, relaxation heuristics, and hierarchical task networks. The search tree here returns as MCTS in Chapter 8 and chain-of-thought in Chapter 18.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-1-foundations-of-agency/module-04-planning-goal-pursuit/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-1-foundations-of-agency/module-05-knowledge-reasoning/index.html">
-<span class="toc-chapter-num">5</span>
-<span class="toc-chapter-title">Knowledge and Reasoning in Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">5</span><div>
+<a class="toc-card-link" href="part-1-foundations-of-agency/module-05-knowledge-reasoning/index.html"><span class="toc-chapter-title">Knowledge and Reasoning in Agents</span></a>
 <span class="toc-chapter-subtitle">Propositional and first-order logic, knowledge bases, inference, ontologies, and Bayesian networks for reasoning under uncertainty. The knowledge base returns as agentic RAG in Chapter 20.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-1-foundations-of-agency/module-05-knowledge-reasoning/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-1-foundations-of-agency/module-06-tools-classical-agent-stack/index.html">
-<span class="toc-chapter-num">6</span>
-<span class="toc-chapter-title">Tools of the Trade: Classical Agent Stack</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">6</span><div>
+<a class="toc-card-link" href="part-1-foundations-of-agency/module-06-tools-classical-agent-stack/index.html"><span class="toc-chapter-title">Tools of the Trade: Classical Agent Stack</span></a>
 <span class="toc-chapter-subtitle">Comparative guide to unified-planning, py-pddl, owlready2, pgmpy, networkx, and Mesa. Code templates and decision guide carried forward through the book.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-1-foundations-of-agency/module-06-tools-classical-agent-stack/</code>
 </li>
 
 </ol>
@@ -102,82 +122,81 @@
 
 <section class="toc-part" data-part-num="2" id="part-2">
 <header class="toc-part-header">
-<h2 class="toc-part-title"><span class="toc-part-prefix">Part II</span> <span class="toc-part-sep">&#183;</span> Learning Agents</h2>
-<span class="toc-part-count">9 chapters</span>
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part II</span> <span class="toc-part-sep">&#183;</span> <a href="part-2-learning-agents/index.html">Learning Agents</a></h2><span class="toc-part-count">9 chapters</span>
 <p class="toc-part-subtitle">Agents that improve from experience: Markov decision processes, tabular and deep reinforcement learning, model-based and hierarchical agents, memory systems, lifelong learning, and meta-learning.</p>
 </header>
 <ol class="toc-chapter-list">
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-07-markov-decision-processes/index.html">
-<span class="toc-chapter-num">7</span>
-<span class="toc-chapter-title">Markov Decision Processes</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">7</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-07-markov-decision-processes/index.html"><span class="toc-chapter-title">Markov Decision Processes</span></a>
 <span class="toc-chapter-subtitle">The MDP formalism, Bellman equations, value functions, policy evaluation, policy iteration, value iteration, and the POMDP extension. The reward function operationalizes the utility function from Chapter 3.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-07-markov-decision-processes/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-08-reinforcement-learning-foundations/index.html">
-<span class="toc-chapter-num">8</span>
-<span class="toc-chapter-title">Reinforcement Learning Foundations</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">8</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-08-reinforcement-learning-foundations/index.html"><span class="toc-chapter-title">Reinforcement Learning Foundations</span></a>
 <span class="toc-chapter-subtitle">Exploration-exploitation, multi-armed bandits, Monte Carlo methods, TD learning, Q-learning, and SARSA, with convergence guarantees for each.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-08-reinforcement-learning-foundations/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-09-deep-reinforcement-learning/index.html">
-<span class="toc-chapter-num">9</span>
-<span class="toc-chapter-title">Deep Reinforcement Learning</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">9</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-09-deep-reinforcement-learning/index.html"><span class="toc-chapter-title">Deep Reinforcement Learning</span></a>
 <span class="toc-chapter-subtitle">DQN and its extensions, the policy gradient theorem, REINFORCE, actor-critic, PPO, SAC, and TD3. Stability analysis and the transition from tabular to function approximation.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-09-deep-reinforcement-learning/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-10-model-based-agents/index.html">
-<span class="toc-chapter-num">10</span>
-<span class="toc-chapter-title">Model-Based Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">10</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-10-model-based-agents/index.html"><span class="toc-chapter-title">Model-Based Agents</span></a>
 <span class="toc-chapter-subtitle">World models, the Dyna architecture, MBPO, Dreamer, and planning in latent space. Agents that learn to imagine before they act.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-10-model-based-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-11-hierarchical-agents/index.html">
-<span class="toc-chapter-num">11</span>
-<span class="toc-chapter-title">Hierarchical Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">11</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-11-hierarchical-agents/index.html"><span class="toc-chapter-title">Hierarchical Agents</span></a>
 <span class="toc-chapter-subtitle">The options framework, semi-MDPs, feudal RL, goal-conditioned RL, temporal abstraction, and subgoal discovery. Agents that decompose long horizons into manageable steps.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-11-hierarchical-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-12-agent-memory-systems/index.html">
-<span class="toc-chapter-num">12</span>
-<span class="toc-chapter-title">Agent Memory Systems</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">12</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-12-agent-memory-systems/index.html"><span class="toc-chapter-title">Agent Memory Systems</span></a>
 <span class="toc-chapter-subtitle">The full taxonomy of agent memory: sensory, working, episodic, semantic, and procedural. Indexing, retrieval, and forgetting, built with Qdrant and mem0. Returns as agentic RAG in Chapter 20.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-12-agent-memory-systems/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-13-lifelong-meta-learning/index.html">
-<span class="toc-chapter-num">13</span>
-<span class="toc-chapter-title">Lifelong and Meta-Learning Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">13</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-13-lifelong-meta-learning/index.html"><span class="toc-chapter-title">Lifelong and Meta-Learning Agents</span></a>
 <span class="toc-chapter-subtitle">Catastrophic forgetting, EWC, progressive networks, and replay buffers for continual learning. MAML, Reptile, and in-context learning as meta-learning for few-shot adaptation.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-13-lifelong-meta-learning/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-14-self-reflective-agents/index.html">
-<span class="toc-chapter-num">14</span>
-<span class="toc-chapter-title">Self-Reflective Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">14</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-14-self-reflective-agents/index.html"><span class="toc-chapter-title">Self-Reflective Agents</span></a>
 <span class="toc-chapter-subtitle">Metacognition, introspective monitoring, uncertainty estimation, calibration, and the Reflexion architecture. Agents that monitor and critique their own reasoning before committing to an action.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-14-self-reflective-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-2-learning-agents/module-15-tools-learning-agent-stack/index.html">
-<span class="toc-chapter-num">15</span>
-<span class="toc-chapter-title">Tools of the Trade: Learning Agent Stack</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">15</span><div>
+<a class="toc-card-link" href="part-2-learning-agents/module-15-tools-learning-agent-stack/index.html"><span class="toc-chapter-title">Tools of the Trade: Learning Agent Stack</span></a>
 <span class="toc-chapter-subtitle">Comparative guide to Gymnasium, Stable-Baselines3, CleanRL, RLlib, Avalanche, learn2learn, and Dreamer-v3. Training loop templates and experiment tracking patterns.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-2-learning-agents/module-15-tools-learning-agent-stack/</code>
 </li>
 
 </ol>
@@ -185,98 +204,97 @@
 
 <section class="toc-part" data-part-num="3" id="part-3">
 <header class="toc-part-header">
-<h2 class="toc-part-title"><span class="toc-part-prefix">Part III</span> <span class="toc-part-sep">&#183;</span> LLM-Powered Agents</h2>
-<span class="toc-part-count">11 chapters</span>
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part III</span> <span class="toc-part-sep">&#183;</span> <a href="part-3-llm-powered-agents/index.html">LLM-Powered Agents</a></h2><span class="toc-part-count">11 chapters</span>
 <p class="toc-part-subtitle">Language models as policies: prompt engineering, extended thinking, tool use and MCP, agentic RAG, autonomous task agents, computer use, self-improvement, and multi-modal agents.</p>
 </header>
 <ol class="toc-chapter-list">
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-16-foundations-llm-agents/index.html">
-<span class="toc-chapter-num">16</span>
-<span class="toc-chapter-title">Foundations of LLM Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">16</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-16-foundations-llm-agents/index.html"><span class="toc-chapter-title">Foundations of LLM Agents</span></a>
 <span class="toc-chapter-subtitle">Emergent capabilities, in-context learning, instruction following, and the LLM as a conditional policy over actions. A minimal agent loop with the Anthropic SDK.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-16-foundations-llm-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-17-prompt-engineering-agents/index.html">
-<span class="toc-chapter-num">17</span>
-<span class="toc-chapter-title">Prompt Engineering for Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">17</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-17-prompt-engineering-agents/index.html"><span class="toc-chapter-title">Prompt Engineering for Agents</span></a>
 <span class="toc-chapter-subtitle">Zero-shot and few-shot prompting, chain-of-thought, ReAct, Tree of Thoughts, Reflexion, self-consistency, and automatic prompt optimization with DSPy and TextGrad.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-17-prompt-engineering-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-18-reasoning-agents/index.html">
-<span class="toc-chapter-num">18</span>
-<span class="toc-chapter-title">Reasoning Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">18</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-18-reasoning-agents/index.html"><span class="toc-chapter-title">Reasoning Agents</span></a>
 <span class="toc-chapter-subtitle">Process reward models, outcome reward models, test-time compute scaling and extended thinking, and MCTS over reasoning steps. Formal analysis of why longer chains improve accuracy.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-18-reasoning-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-19-tool-using-agents/index.html">
-<span class="toc-chapter-num">19</span>
-<span class="toc-chapter-title">Tool-Using Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">19</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-19-tool-using-agents/index.html"><span class="toc-chapter-title">Tool-Using Agents</span></a>
 <span class="toc-chapter-subtitle">Tool selection policies, function calling, the Model Context Protocol architecture, parallel tool use, and error recovery. Tool use from Chapter 4 returns here at LLM scale.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-19-tool-using-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-20-memory-augmented-agentic-rag/index.html">
-<span class="toc-chapter-num">20</span>
-<span class="toc-chapter-title">Memory-Augmented Agents and Agentic RAG</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">20</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-20-memory-augmented-agentic-rag/index.html"><span class="toc-chapter-title">Memory-Augmented Agents and Agentic RAG</span></a>
 <span class="toc-chapter-subtitle">RAG, dense and sparse retrieval, hybrid search. Agentic RAG: the retriever as a policy, query rewriting, multi-hop reasoning, and confidence-gated termination. Knowledge base meets memory system.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-20-memory-augmented-agentic-rag/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-21-autonomous-task-agents/index.html">
-<span class="toc-chapter-num">21</span>
-<span class="toc-chapter-title">Autonomous Task Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">21</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-21-autonomous-task-agents/index.html"><span class="toc-chapter-title">Autonomous Task Agents</span></a>
 <span class="toc-chapter-subtitle">Task decomposition, plan-and-execute architectures, long-horizon completion, and failure recovery. Evaluated on GAIA, AgentBench, and tau-bench.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-21-autonomous-task-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-22-computer-use-gui-agents/index.html">
-<span class="toc-chapter-num">22</span>
-<span class="toc-chapter-title">Computer-Use and GUI Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">22</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-22-computer-use-gui-agents/index.html"><span class="toc-chapter-title">Computer-Use and GUI Agents</span></a>
 <span class="toc-chapter-subtitle">Pixel-level observation spaces, OS-level action spaces, GUI grounding, web navigation, and the accessibility tree versus screenshot tradeoff. Benchmarked on OSWorld and WebArena.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-22-computer-use-gui-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-23-self-improving-agents/index.html">
-<span class="toc-chapter-num">23</span>
-<span class="toc-chapter-title">Self-Improving Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">23</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-23-self-improving-agents/index.html"><span class="toc-chapter-title">Self-Improving Agents</span></a>
 <span class="toc-chapter-subtitle">STaR, Constitutional AI, RLHF, DPO, and iterative self-play. Agents that bootstrap their own training signal and the safety constraints that keep self-modification bounded.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-23-self-improving-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-24-multimodal-agents/index.html">
-<span class="toc-chapter-num">24</span>
-<span class="toc-chapter-title">Multi-Modal Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">24</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-24-multimodal-agents/index.html"><span class="toc-chapter-title">Multi-Modal Agents</span></a>
 <span class="toc-chapter-subtitle">Vision-language models as policies, audio-language agents, cross-modal reasoning, and tokenizing non-text modalities. Benchmarked on MMBench, MMMU, and MathVista.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-24-multimodal-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-25-agent-evaluation/index.html">
-<span class="toc-chapter-num">25</span>
-<span class="toc-chapter-title">Agent Evaluation</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">25</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-25-agent-evaluation/index.html"><span class="toc-chapter-title">Agent Evaluation</span></a>
 <span class="toc-chapter-subtitle">Static versus dynamic evaluation, benchmark contamination, LLM-as-judge, process versus outcome metrics. A practical harness for evaluating any agent you build in this book.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-25-agent-evaluation/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-3-llm-powered-agents/module-26-tools-llm-agent-stack/index.html">
-<span class="toc-chapter-num">26</span>
-<span class="toc-chapter-title">Tools of the Trade: LLM Agent Stack</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">26</span><div>
+<a class="toc-card-link" href="part-3-llm-powered-agents/module-26-tools-llm-agent-stack/index.html"><span class="toc-chapter-title">Tools of the Trade: LLM Agent Stack</span></a>
 <span class="toc-chapter-subtitle">Comparative guide to LangGraph, AutoGen/AG2, CrewAI, smolagents, and the OpenAI and Anthropic agent SDKs. LangSmith for tracing, evaluation, and prompt management.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-3-llm-powered-agents/module-26-tools-llm-agent-stack/</code>
 </li>
 
 </ol>
@@ -284,106 +302,105 @@
 
 <section class="toc-part" data-part-num="4" id="part-4">
 <header class="toc-part-header">
-<h2 class="toc-part-title"><span class="toc-part-prefix">Part IV</span> <span class="toc-part-sep">&#183;</span> Multi-Agent and Deployed Systems</h2>
-<span class="toc-part-count">12 chapters</span>
+<h2 class="toc-part-title"><span class="toc-part-prefix">Part IV</span> <span class="toc-part-sep">&#183;</span> <a href="part-4-multi-agent-deployed-systems/index.html">Multi-Agent and Deployed Systems</a></h2><span class="toc-part-count">12 chapters</span>
 <p class="toc-part-subtitle">Agents working together and at scale: game theory, MARL, swarms, software engineering agents, research agents, observability and cost, embodied and robotics agents, safety, and governance.</p>
 </header>
 <ol class="toc-chapter-list">
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-27-foundations-multi-agent-systems/index.html">
-<span class="toc-chapter-num">27</span>
-<span class="toc-chapter-title">Foundations of Multi-Agent Systems</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">27</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-27-foundations-multi-agent-systems/index.html"><span class="toc-chapter-title">Foundations of Multi-Agent Systems</span></a>
 <span class="toc-chapter-subtitle">Game theory, Nash equilibrium, mechanism design, communication protocols, and the Dec-POMDP formulation of cooperative multi-agent problems.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-27-foundations-multi-agent-systems/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-28-coordination-negotiation/index.html">
-<span class="toc-chapter-num">28</span>
-<span class="toc-chapter-title">Coordination and Negotiation</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">28</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-28-coordination-negotiation/index.html"><span class="toc-chapter-title">Coordination and Negotiation</span></a>
 <span class="toc-chapter-subtitle">Contract nets, combinatorial auctions, coalition formation, DCOP, and debate and critique protocols in LLM multi-agent systems.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-28-coordination-negotiation/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-29-multi-agent-reinforcement-learning/index.html">
-<span class="toc-chapter-num">29</span>
-<span class="toc-chapter-title">Multi-Agent Reinforcement Learning</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">29</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-29-multi-agent-reinforcement-learning/index.html"><span class="toc-chapter-title">Multi-Agent Reinforcement Learning</span></a>
 <span class="toc-chapter-subtitle">CTDE, QMIX, MADDPG, MAPPO, non-stationarity, and credit assignment. Benchmarked on SMAC and Google Research Football.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-29-multi-agent-reinforcement-learning/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-30-swarm-intelligence-emergence/index.html">
-<span class="toc-chapter-num">30</span>
-<span class="toc-chapter-title">Swarm Intelligence and Emergence</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">30</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-30-swarm-intelligence-emergence/index.html"><span class="toc-chapter-title">Swarm Intelligence and Emergence</span></a>
 <span class="toc-chapter-subtitle">Ant colony optimization, particle swarms, boid flocking, self-organization, and emergence as a formal information-theoretic concept. From biological swarms to LLM populations.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-30-swarm-intelligence-emergence/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-31-software-engineering-agents/index.html">
-<span class="toc-chapter-num">31</span>
-<span class="toc-chapter-title">Software Engineering Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">31</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-31-software-engineering-agents/index.html"><span class="toc-chapter-title">Software Engineering Agents</span></a>
 <span class="toc-chapter-subtitle">Code generation as search, program synthesis, test-driven development by agents, repository-level reasoning, and the CodeAct action space. Benchmarked on SWE-bench Verified. The book's own codebase is the working example.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-31-software-engineering-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-32-research-scientific-agents/index.html">
-<span class="toc-chapter-num">32</span>
-<span class="toc-chapter-title">Research and Scientific Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">32</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-32-research-scientific-agents/index.html"><span class="toc-chapter-title">Research and Scientific Agents</span></a>
 <span class="toc-chapter-subtitle">The scientific method as an agent loop, hypothesis generation, experiment design, automated literature review, novelty detection, and the AI Scientist architecture.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-32-research-scientific-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-33-ai-teams-orchestration/index.html">
-<span class="toc-chapter-num">33</span>
-<span class="toc-chapter-title">AI Teams and Orchestration</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">33</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-33-ai-teams-orchestration/index.html"><span class="toc-chapter-title">AI Teams and Orchestration</span></a>
 <span class="toc-chapter-subtitle">Role specialization, debate and critique, majority voting, mixture-of-agents, and orchestrator-worker patterns. A multi-agent software company built with AutoGen.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-33-ai-teams-orchestration/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-34-observability-tracing-cost-engineering/index.html">
-<span class="toc-chapter-num">34</span>
-<span class="toc-chapter-title">Observability, Tracing, and Cost Engineering</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">34</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-34-observability-tracing-cost-engineering/index.html"><span class="toc-chapter-title">Observability, Tracing, and Cost Engineering</span></a>
 <span class="toc-chapter-subtitle">Span-based tracing, token accounting, latency attribution. Token economy, model routing by difficulty, KV-cache reuse, and the latency-quality Pareto frontier.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-34-observability-tracing-cost-engineering/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-35-embodied-robotics-agents/index.html">
-<span class="toc-chapter-num">35</span>
-<span class="toc-chapter-title">Embodied and Robotics Agents</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">35</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-35-embodied-robotics-agents/index.html"><span class="toc-chapter-title">Embodied and Robotics Agents</span></a>
 <span class="toc-chapter-subtitle">Kinematics, motion planning, manipulation, the sim-to-real gap, and vision-language-action models including OpenVLA and pi-zero. Benchmarked on LIBERO and Meta-World.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-35-embodied-robotics-agents/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-36-agent-safety-red-teaming/index.html">
-<span class="toc-chapter-num">36</span>
-<span class="toc-chapter-title">Agent Safety and Red-Teaming</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">36</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-36-agent-safety-red-teaming/index.html"><span class="toc-chapter-title">Agent Safety and Red-Teaming</span></a>
 <span class="toc-chapter-subtitle">Threat model for agentic systems: prompt injection, goal hijacking, reward hacking. Alignment, corrigibility, Constitutional AI, scalable oversight, and debate. Benchmarked on AgentHarm and HarmBench.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-36-agent-safety-red-teaming/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-37-governance-alignment/index.html">
-<span class="toc-chapter-num">37</span>
-<span class="toc-chapter-title">Governance and Alignment</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">37</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-37-governance-alignment/index.html"><span class="toc-chapter-title">Governance and Alignment</span></a>
 <span class="toc-chapter-subtitle">EU AI Act, NIST AI RMF, human oversight requirements, liability in autonomous systems, auditing, and international coordination for agentic AI.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-37-governance-alignment/</code>
 </li>
 
 <li class="toc-chapter">
-<a href="part-4-multi-agent-deployed-systems/module-38-tools-deployed-agent-stack/index.html">
-<span class="toc-chapter-num">38</span>
-<span class="toc-chapter-title">Tools of the Trade: Deployed Agent Stack</span>
+<div class="toc-chapter-head"><span class="toc-chapter-num">38</span><div>
+<a class="toc-card-link" href="part-4-multi-agent-deployed-systems/module-38-tools-deployed-agent-stack/index.html"><span class="toc-chapter-title">Tools of the Trade: Deployed Agent Stack</span></a>
 <span class="toc-chapter-subtitle">Modal for serverless agent execution, Prefect for orchestration, LangSmith for observability, Qdrant for vector memory, and Docker plus API gateway for agent services. Architecture of a production agentic system.</span>
-</a>
+</div></div>
+<code class="toc-chapter-dir">part-4-multi-agent-deployed-systems/module-38-tools-deployed-agent-stack/</code>
 </li>
 
 </ol>
@@ -391,21 +408,20 @@
 
 <section class="toc-part toc-appendices" id="appendices">
 <header class="toc-part-header">
-<h2 class="toc-part-title"><span class="toc-part-prefix">Appendices</span></h2>
-<span class="toc-part-count">5 appendices &amp; a capstone</span>
+<h2 class="toc-part-title"><span class="toc-part-prefix">Appendices &amp; Capstone</span></h2><span class="toc-part-count">5 appendices &amp; a capstone</span>
 </header>
 <ol class="toc-chapter-list">
-<li class="toc-chapter"><a href="appendices/appendix-a-mathematical-foundations/index.html"><span class="toc-chapter-num">A</span><span class="toc-chapter-title">Mathematical Foundations</span><span class="toc-chapter-subtitle">Probability, linear algebra for policies, dynamic programming, graph theory, information theory, and convex optimization.</span></a></li>
-<li class="toc-chapter"><a href="appendices/appendix-b-framework-ecosystem/index.html"><span class="toc-chapter-num">B</span><span class="toc-chapter-title">Agent Framework Ecosystem</span><span class="toc-chapter-subtitle">LangChain, LangGraph, AutoGen/AG2, CrewAI, Semantic Kernel, Haystack, OpenAI Agents SDK, Anthropic Claude Code SDK, smolagents, Google ADK.</span></a></li>
-<li class="toc-chapter"><a href="appendices/appendix-c-simulation-platforms/index.html"><span class="toc-chapter-num">C</span><span class="toc-chapter-title">Simulation and Environment Platforms</span><span class="toc-chapter-subtitle">Gymnasium, Isaac Lab, MuJoCo, CARLA, NetLogo, Mesa, PettingZoo, BrowserGym. Hardware requirements and cloud alternatives.</span></a></li>
-<li class="toc-chapter"><a href="appendices/appendix-d-research-frontiers/index.html"><span class="toc-chapter-num">D</span><span class="toc-chapter-title">Research Frontiers Index</span><span class="toc-chapter-subtitle">Living table of open problems mapped to ArXiv IDs, benchmarks, and key research groups, organized by chapter.</span></a></li>
-<li class="toc-chapter"><a href="capstone/index.html"><span class="toc-chapter-num">E</span><span class="toc-chapter-title">Capstone Projects</span><span class="toc-chapter-subtitle">Ten end-to-end agentic AI projects with starter code, architecture diagrams, grading rubrics, and AGENT_PROMPT.md files for AI-assisted extension.</span></a></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">A</span><div><a class="toc-card-link" href="appendices/appendix-a-mathematical-foundations/index.html"><span class="toc-chapter-title">Mathematical Foundations</span></a><span class="toc-chapter-subtitle">Probability, linear algebra for policies, dynamic programming, graph theory, information theory, and convex optimization.</span></div></div><code class="toc-chapter-dir">appendices/appendix-a-mathematical-foundations/</code></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">B</span><div><a class="toc-card-link" href="appendices/appendix-b-framework-ecosystem/index.html"><span class="toc-chapter-title">Agent Framework Ecosystem</span></a><span class="toc-chapter-subtitle">LangChain, LangGraph, AutoGen/AG2, CrewAI, Semantic Kernel, Haystack, OpenAI Agents SDK, Anthropic Claude Code SDK, smolagents, Google ADK.</span></div></div><code class="toc-chapter-dir">appendices/appendix-b-framework-ecosystem/</code></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">C</span><div><a class="toc-card-link" href="appendices/appendix-c-simulation-platforms/index.html"><span class="toc-chapter-title">Simulation and Environment Platforms</span></a><span class="toc-chapter-subtitle">Gymnasium, Isaac Lab, MuJoCo, CARLA, NetLogo, Mesa, PettingZoo, BrowserGym. Hardware requirements and cloud alternatives.</span></div></div><code class="toc-chapter-dir">appendices/appendix-c-simulation-platforms/</code></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">D</span><div><a class="toc-card-link" href="appendices/appendix-d-research-frontiers/index.html"><span class="toc-chapter-title">Research Frontiers Index</span></a><span class="toc-chapter-subtitle">Living table of open problems mapped to ArXiv IDs, benchmarks, and key research groups, organized by chapter.</span></div></div><code class="toc-chapter-dir">appendices/appendix-d-research-frontiers/</code></li>
+<li class="toc-chapter"><div class="toc-chapter-head"><span class="toc-chapter-num">E</span><div><a class="toc-card-link" href="capstone/index.html"><span class="toc-chapter-title">Capstone Projects</span></a><span class="toc-chapter-subtitle">Ten end-to-end agentic AI projects with starter code, architecture diagrams, grading rubrics, and AGENT_PROMPT.md files for AI-assisted extension.</span></div></div><code class="toc-chapter-dir">capstone/</code></li>
 </ol>
 </section>
 
 </main>
 <footer class="chapter-footer">
-<p>&#169; 2026 Alexander Apartsin &amp; Yehudit Aperstein &#183; <a href="index.html">Building Agentic AI</a></p>
+<p>&#169; 2026 Alexander Apartsin &amp; Yehudit Aperstein &#183; <a href="index.html">Building Agentic AI: From Goals to Autonomous Systems</a></p>
 </footer>
 </body>
 </html>

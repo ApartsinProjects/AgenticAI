@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Building Agentic AI: From Goals to Autonomous Systems. A practitioner's guide to agent foundations, reinforcement learning, LLM agents, and autonomous systems." name="description"/>
+<meta content="Building Agentic AI: From Goals to Autonomous Systems. A practitioner's guide to agent foundations, reinforcement learning, LLM agents, multi-agent systems, and autonomous deployment." name="description"/>
 <title>Building Agentic AI: From Goals to Autonomous Systems</title>
 <meta content="Building Agentic AI: From Goals to Autonomous Systems" property="og:title"/>
-<meta content="A practitioner's guide to agent foundations, reinforcement learning, LLM agents, and autonomous systems." property="og:description"/>
+<meta content="A practitioner's guide to agent foundations, reinforcement learning, LLM agents, multi-agent systems, and autonomous deployment." property="og:description"/>
 <meta content="https://agentic.apartsin.com/images/book-cover.jpg" property="og:image"/>
 <meta content="https://agentic.apartsin.com/" property="og:url"/>
 <meta content="book" property="og:type"/>
@@ -15,29 +15,30 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
 
+/* Cover-page styles. All rules are scoped under body.cover-page so the
+   shared stylesheet (styles/book.css) keeps governing chapter pages
+   while the cover carries the dark house-cover look. */
+
 body.cover-page {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: radial-gradient(ellipse at 30% 15%, #0d1f38 0%, #080f1e 45%, #040810 100%);
+    background: radial-gradient(ellipse at 30% 15%, #122338 0%, #0b1626 45%, #070d18 100%);
     color: #dce5ee;
     font-family: 'Cormorant Garamond', Georgia, serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Agent-loop node grid motif */
+/* Faint agent-loop node network motif and vignette: the agent loop is where the book begins. */
 body.cover-page::before {
     content: '';
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 30%, rgba(80, 200, 180, 0.06) 0%, transparent 45%),
-        radial-gradient(circle at 75% 65%, rgba(160, 100, 240, 0.07) 0%, transparent 45%),
-        radial-gradient(circle at 50% 90%, rgba(240, 180, 80, 0.05) 0%, transparent 40%),
-        repeating-linear-gradient(0deg, rgba(100, 180, 220, 0.025) 0, rgba(100, 180, 220, 0.025) 1px, transparent 1px, transparent 56px),
-        repeating-linear-gradient(90deg, rgba(100, 180, 220, 0.025) 0, rgba(100, 180, 220, 0.025) 1px, transparent 1px, transparent 56px),
-        radial-gradient(ellipse at center, transparent 40%, rgba(4, 8, 16, 0.7) 100%);
+        repeating-linear-gradient(0deg, rgba(120, 170, 220, 0.035) 0, rgba(120, 170, 220, 0.035) 1px, transparent 1px, transparent 48px),
+        repeating-linear-gradient(90deg, rgba(120, 170, 220, 0.035) 0, rgba(120, 170, 220, 0.035) 1px, transparent 1px, transparent 48px),
+        radial-gradient(ellipse at center, transparent 40%, rgba(5, 9, 16, 0.65) 100%);
     pointer-events: none;
     z-index: 1;
 }
@@ -51,9 +52,8 @@ body.cover-page .cover-wrap {
 }
 
 body.cover-page .cover-image-wrapper { margin: 0 auto 1.4rem; }
-body.cover-page .cover-image { max-width: 280px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 18px 48px rgba(0,0,0,0.55), 0 0 60px rgba(80,200,180,0.1); border: 1px solid rgba(255,255,255,0.12); display: block; margin: 0 auto; }
+body.cover-page .cover-image { max-width: 280px; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 18px 48px rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.15); display: block; margin: 0 auto; }
 @media (max-width: 600px) { body.cover-page .cover-image { max-width: 200px; } }
-
 body.cover-page .hero {
     min-height: 88vh;
     display: flex;
@@ -81,8 +81,8 @@ body.cover-page .edition-pill {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.28em;
-    color: rgba(100, 220, 200, 0.75);
-    border: 1px solid rgba(100, 220, 200, 0.22);
+    color: rgba(150, 200, 235, 0.75);
+    border: 1px solid rgba(150, 200, 235, 0.22);
     border-radius: 100px;
     padding: 0.4rem 1.3rem;
     margin-bottom: 1.6rem;
@@ -97,7 +97,7 @@ body.cover-page .cover-title {
     color: #e9f1f8;
     letter-spacing: 0.02em;
     margin: 0 0 0.55rem;
-    text-shadow: 0 0 36px rgba(80, 200, 180, 0.2), 0 2px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 0 36px rgba(80, 200, 180, 0.22), 0 2px 4px rgba(0, 0, 0, 0.45);
 }
 
 body.cover-page .cover-title .title-arc {
@@ -105,11 +105,11 @@ body.cover-page .cover-title .title-arc {
     font-size: clamp(1.15rem, 2.9vw, 1.85rem);
     font-weight: 500;
     margin-top: 0.45rem;
-    background: linear-gradient(90deg, #50c8b4 0%, #a064f0 40%, #e08060 75%, #f0c060 100%);
+    background: linear-gradient(90deg, #50c8b4 0%, #9fb6f0 35%, #a064f0 70%, #f0c060 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #a064f0;
+    color: #9fb6f0;
 }
 
 body.cover-page .cover-subtitle {
@@ -122,6 +122,7 @@ body.cover-page .cover-subtitle {
     letter-spacing: 0.01em;
 }
 
+/* Decorative separator + author byline */
 body.cover-page .cover-separator {
     margin: 1.6rem auto 1.1rem;
     display: flex;
@@ -135,14 +136,13 @@ body.cover-page .cover-separator::after {
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(100, 220, 200, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(150, 200, 235, 0.4), transparent);
 }
 body.cover-page .cover-separator span {
-    color: rgba(100, 220, 200, 0.6);
+    color: rgba(150, 200, 235, 0.6);
     font-size: 0.8rem;
     line-height: 1;
 }
-
 body.cover-page .cover-authors {
     margin: 0 auto;
     font-size: clamp(1rem, 2vw, 1.2rem);
@@ -152,10 +152,13 @@ body.cover-page .cover-authors {
 body.cover-page .cover-authors a {
     color: rgba(229, 238, 246, 0.9);
     text-decoration: none;
-    border-bottom: 1px solid rgba(100, 220, 200, 0.3);
+    border-bottom: 1px solid rgba(150, 200, 235, 0.3);
     transition: color 0.25s, border-color 0.25s;
 }
-body.cover-page .cover-authors a:hover { color: #64dcc8; border-bottom-color: rgba(100, 220, 200, 0.6); }
+body.cover-page .cover-authors a:hover {
+    color: #7fd0ec;
+    border-bottom-color: rgba(150, 200, 235, 0.6);
+}
 body.cover-page .cover-authors .amp { margin: 0 0.5rem; opacity: 0.45; }
 
 body.cover-page .cover-promise {
@@ -189,26 +192,26 @@ body.cover-page .btn-amazon {
 }
 
 body.cover-page .btn-start {
-    color: #050d18;
-    background: linear-gradient(120deg, #50c8b4 0%, #a064f0 55%, #f0c060 130%);
+    color: #081120;
+    background: linear-gradient(120deg, #50c8b4 0%, #9fb6f0 55%, #f0c060 130%);
     box-shadow: 0 6px 26px rgba(80, 200, 180, 0.28);
 }
 body.cover-page .btn-start:hover,
 body.cover-page .btn-start:focus {
     transform: translateY(-2px);
-    box-shadow: 0 10px 34px rgba(80, 200, 180, 0.42);
-    color: #050d18;
+    box-shadow: 0 10px 34px rgba(80, 200, 180, 0.4);
+    color: #081120;
 }
 
 body.cover-page .btn-contents {
     color: rgba(220, 229, 238, 0.85);
-    border: 1px solid rgba(100, 220, 200, 0.35);
+    border: 1px solid rgba(150, 200, 235, 0.35);
     background: transparent;
 }
 body.cover-page .btn-contents:hover,
 body.cover-page .btn-contents:focus {
     color: #eaf3fa;
-    border-color: rgba(100, 220, 200, 0.7);
+    border-color: rgba(150, 200, 235, 0.7);
     background: rgba(80, 200, 180, 0.08);
 }
 
@@ -265,8 +268,8 @@ body.cover-page .part-card {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    background: rgba(12, 22, 40, 0.72);
-    border: 1px solid rgba(100, 180, 220, 0.14);
+    background: rgba(16, 30, 48, 0.72);
+    border: 1px solid rgba(150, 200, 235, 0.14);
     border-radius: 12px;
     padding: 1.5rem 1.4rem 1.3rem;
     color: inherit;
@@ -275,19 +278,24 @@ body.cover-page .part-card {
 body.cover-page .part-card:hover,
 body.cover-page .part-card:focus {
     transform: translateY(-4px);
-    border-color: rgba(100, 180, 220, 0.5);
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5);
+    border-color: rgba(150, 200, 235, 0.5);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
 }
-body.cover-page .part-card.part-1:hover { border-color: #50c8b4; }
-body.cover-page .part-card.part-2:hover { border-color: #d9c46a; }
-body.cover-page .part-card.part-3:hover { border-color: #a064f0; }
-body.cover-page .part-card.part-4:hover { border-color: #e07860; }
+body.cover-page .part-card.part-1:hover,
+body.cover-page .part-card.part-1:focus { border-color: #50c8b4; }
+body.cover-page .part-card.part-2:hover,
+body.cover-page .part-card.part-2:focus { border-color: #d9c46a; }
+body.cover-page .part-card.part-3:hover,
+body.cover-page .part-card.part-3:focus { border-color: #a064f0; }
+body.cover-page .part-card.part-4:hover,
+body.cover-page .part-card.part-4:focus { border-color: #e07860; }
 
 body.cover-page .part-card .part-roman {
     font-family: 'Cinzel', Georgia, serif;
     font-size: 2rem;
     font-weight: 700;
     line-height: 1;
+    color: #7fd0ec;
     margin-bottom: 0.55rem;
 }
 body.cover-page .part-card.part-1 .part-roman { color: #50c8b4; }
@@ -318,51 +326,12 @@ body.cover-page .part-card .part-count {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.14em;
+    color: rgba(150, 200, 235, 0.8);
 }
 body.cover-page .part-card.part-1 .part-count { color: #50c8b4; }
 body.cover-page .part-card.part-2 .part-count { color: #d9c46a; }
 body.cover-page .part-card.part-3 .part-count { color: #a064f0; }
 body.cover-page .part-card.part-4 .part-count { color: #e07860; }
-
-body.cover-page .teaches-section { padding: 3rem 0 2rem; }
-
-body.cover-page .teach-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 1rem;
-}
-
-body.cover-page .teach-item {
-    background: rgba(12, 22, 40, 0.5);
-    border: 1px solid rgba(100, 180, 220, 0.1);
-    border-radius: 10px;
-    padding: 1.15rem 1.1rem;
-}
-
-body.cover-page .teach-item .teach-glyph {
-    font-size: 1.25rem;
-    line-height: 1;
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #50c8b4;
-}
-
-body.cover-page .teach-item h3 {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #dfeaf4;
-    margin: 0 0 0.45rem;
-}
-
-body.cover-page .teach-item p {
-    font-size: 0.95rem;
-    color: rgba(220, 229, 238, 0.68);
-    line-height: 1.5;
-    margin: 0;
-}
 
 body.cover-page .series-section { padding: 3rem 0 1.5rem; }
 body.cover-page .series-card { cursor: default; }
@@ -382,12 +351,20 @@ body.cover-page .series-card .series-links {
     letter-spacing: 0.1em;
 }
 body.cover-page .series-card .series-links a {
-    color: #50c8b4;
+    color: #7fd0ec;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
 }
-body.cover-page .series-card .series-links a:hover { border-bottom-color: #50c8b4; }
+body.cover-page .series-card.part-1 .series-links a { color: #50c8b4; }
+body.cover-page .series-card.part-2 .series-links a { color: #d9c46a; }
+body.cover-page .series-card.part-3 .series-links a { color: #a064f0; }
+body.cover-page .series-card.part-4 .series-links a { color: #e07860; }
+body.cover-page .series-card .series-links a:hover { border-bottom-color: #7fd0ec; }
+body.cover-page .series-card.part-1 .series-links a:hover { border-bottom-color: #50c8b4; }
+body.cover-page .series-card.part-2 .series-links a:hover { border-bottom-color: #d9c46a; }
+body.cover-page .series-card.part-3 .series-links a:hover { border-bottom-color: #a064f0; }
+body.cover-page .series-card.part-4 .series-links a:hover { border-bottom-color: #e07860; }
 body.cover-page .series-card .series-here {
     font-family: 'Cinzel', Georgia, serif;
     font-size: 0.74rem;
@@ -403,11 +380,51 @@ body.cover-page .series-cta {
     color: rgba(220, 229, 238, 0.7);
 }
 body.cover-page .series-cta a {
-    color: #50c8b4;
+    color: #7fd0ec;
     text-decoration: none;
-    border-bottom: 1px solid rgba(80, 200, 180, 0.3);
+    border-bottom: 1px solid rgba(150, 200, 235, 0.3);
 }
-body.cover-page .series-cta a:hover { border-bottom-color: rgba(80, 200, 180, 0.7); }
+body.cover-page .series-cta a:hover { border-bottom-color: rgba(150, 200, 235, 0.7); }
+
+body.cover-page .teaches-section { padding: 3rem 0 2rem; }
+
+body.cover-page .teach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+}
+
+body.cover-page .teach-item {
+    background: rgba(16, 30, 48, 0.5);
+    border: 1px solid rgba(150, 200, 235, 0.1);
+    border-radius: 10px;
+    padding: 1.15rem 1.1rem;
+}
+
+body.cover-page .teach-item .teach-glyph {
+    font-size: 1.25rem;
+    line-height: 1;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #7fd0ec;
+}
+
+body.cover-page .teach-item h3 {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #dfeaf4;
+    margin: 0 0 0.45rem;
+}
+
+body.cover-page .teach-item p {
+    font-size: 0.95rem;
+    color: rgba(220, 229, 238, 0.68);
+    line-height: 1.5;
+    margin: 0;
+}
 
 body.cover-page footer.cover-footer {
     position: relative;
@@ -415,7 +432,7 @@ body.cover-page footer.cover-footer {
     text-align: center;
     padding: 2.5rem 1.5rem 2.2rem;
     margin-top: 2rem;
-    border-top: 1px solid rgba(100, 180, 220, 0.12);
+    border-top: 1px solid rgba(150, 200, 235, 0.12);
     color: rgba(220, 229, 238, 0.45);
     font-size: 0.9rem;
     background: transparent;
@@ -428,12 +445,14 @@ body.cover-page footer.cover-footer .footer-title {
     color: rgba(220, 229, 238, 0.55);
 }
 body.cover-page footer.cover-footer a {
-    color: rgba(100, 220, 200, 0.75);
+    color: rgba(150, 200, 235, 0.75);
     text-decoration: none;
 }
-body.cover-page footer.cover-footer a:hover { color: #64dcc8; }
+body.cover-page footer.cover-footer a:hover { color: #aedcf5; }
 </style>
 <script defer="" src="scripts/book.js"></script>
+<link href="pagefind/pagefind-ui.css" rel="stylesheet"/>
+<script defer="" src="pagefind/pagefind-ui.js"></script>
 </head>
 <body class="cover-page">
 
@@ -441,9 +460,7 @@ body.cover-page footer.cover-footer a:hover { color: #64dcc8; }
 
 <header class="hero">
 <span class="edition-pill">First Edition &#183; 2026</span>
-<div class="cover-image-wrapper">
-  <img alt="Book cover: a constellation of glowing agent nodes connected by luminous arcs rises through decision loops and planning trees into a complex autonomous system, representing the journey from simple reactive agents to autonomous intelligence" class="cover-image" height="2560" src="images/book-cover.jpg" width="1600"/>
-</div>
+<div class="cover-image-wrapper"><img alt="Book cover: a teal node network at the base rises through violet concentric rings representing the agent loop, with a robotic hand at the nexus and particle streams ascending to a warm amber radiant point at the apex" class="cover-image" height="2560" src="images/book-cover.jpg" width="1600"/></div>
 <h1 class="cover-title">Building Agentic AI
 <span class="title-arc">From Goals to Autonomous Systems</span></h1>
 <p class="cover-subtitle">A practitioner's guide to agent foundations, reinforcement learning, LLM agents, multi-agent systems, and autonomous deployment.</p>
@@ -509,32 +526,32 @@ body.cover-page footer.cover-footer a:hover { color: #64dcc8; }
 
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#9881;</span>
-<h3>Theory First</h3>
-<p>Every chapter opens with formal definitions, key theorems, and derivations so the implementation that follows has a principled foundation, not just working code.</p>
+<h3>Worked Pipelines</h3>
+<p>Every chapter builds complete, runnable systems (a grid-world agent, a PPO policy, a multi-tool LLM agent end to end), never isolated snippets.</p>
 </div>
 
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#9889;</span>
 <h3>Library Shortcuts</h3>
-<p>After each from-scratch build, a shortcut callout shows the same task in a few lines of LangGraph, Stable-Baselines3, or the Anthropic SDK, naming exactly what the library handles for you.</p>
+<p>After each from-scratch build, a shortcut callout shows the same task in a few lines of LangGraph, Stable-Baselines3, or the Anthropic SDK, and names exactly what the library handles for you.</p>
 </div>
 
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#9998;</span>
-<h3>Benchmark Anchors</h3>
-<p>Every chapter includes a table of published SOTA numbers on the standard benchmark for that topic, with instructions for reproducing the evaluation yourself.</p>
+<h3>A Callout System</h3>
+<p>Pitfalls, math asides, benchmark tables, and cross-references are typeset as distinct boxes, so you can read deep or skim fast and never miss a trap.</p>
 </div>
 
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#9654;</span>
-<h3>Vibe Coding Ready</h3>
-<p>Every recipe ends with an <code># EXTEND:</code> block and a companion <code>AGENT_PROMPT.md</code> so you can hand the chapter's project to Claude Code and keep building.</p>
+<h3>Exercises &amp; Labs</h3>
+<p>Each chapter closes with hands-on exercises that extend its worked pipelines, from quick checks to small projects you can put in a portfolio.</p>
 </div>
 
 <div class="teach-item">
 <span aria-hidden="true" class="teach-glyph">&#8634;</span>
 <h3>Classical Ideas Return Learned</h3>
-<p>The utility function becomes the reward signal. The search tree becomes chain-of-thought. The knowledge base becomes agentic RAG. One story, told twice across the four parts.</p>
+<p>The utility function becomes the reward signal, the search tree becomes chain-of-thought, the knowledge base becomes agentic RAG. One story, told twice.</p>
 </div>
 
 </div>
@@ -543,7 +560,7 @@ body.cover-page footer.cover-footer a:hover { color: #64dcc8; }
 <section aria-labelledby="series-heading" class="series-section">
 <h2 class="cover-section-title" id="series-heading">The Hands-On AI Science Series</h2>
 <p class="cover-section-sub">Building Agentic AI is one of seven connected books, each a deep, build-it-yourself guide to a major field of AI.</p>
-<p class="cover-promise" style="margin-top:0;">Hands-On AI Science is a series of in-depth guides to the major fields of artificial intelligence. Every book goes deep into the theory, models, and internals, covering the classical foundations and the most recent ideas, then shows you how to build each one in Python with the modern libraries and tools that get the job done. Each volume is self-contained and complete enough to anchor a full course on its subject.</p>
+<p class="cover-promise" style="margin-top:0;">Hands-On AI Science is a series of in-depth guides to the major fields of artificial intelligence. Every book goes deep into the theory, models, and internals, covering the classical foundations and the most recent ideas, then shows you how to build each one in Python with the modern libraries and tools that get the job done. The writing stays plain and light (illustrations, analogies, mental models, worked examples, and a little fun) without trading away rigor or coverage. Each volume is self-contained and complete enough to anchor a full course on its subject.</p>
 <div class="part-grid">
 
 <div class="part-card series-card part-1">
@@ -571,6 +588,7 @@ body.cover-page footer.cover-footer a:hover { color: #64dcc8; }
 </div>
 
 </div>
+<p class="series-cta">Read the full <a href="front-matter/about-the-series.html">About the Hands-On AI Science Series</a> note.</p>
 </section>
 
 </div>
