@@ -30,7 +30,7 @@ body.cover-page {
     overflow-x: hidden;
 }
 
-/* Faint agent-loop node network motif and vignette: the agent loop is where the book begins. */
+/* Faint pixel-grid motif and vignette: pixels are where the book begins. */
 body.cover-page::before {
     content: '';
     position: fixed;
@@ -97,7 +97,7 @@ body.cover-page .cover-title {
     color: #e9f1f8;
     letter-spacing: 0.02em;
     margin: 0 0 0.55rem;
-    text-shadow: 0 0 36px rgba(80, 200, 180, 0.22), 0 2px 4px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 0 36px rgba(110, 180, 235, 0.22), 0 2px 4px rgba(0, 0, 0, 0.45);
 }
 
 body.cover-page .cover-title .title-arc {
@@ -105,11 +105,11 @@ body.cover-page .cover-title .title-arc {
     font-size: clamp(1.15rem, 2.9vw, 1.85rem);
     font-weight: 500;
     margin-top: 0.45rem;
-    background: linear-gradient(90deg, #50c8b4 0%, #9fb6f0 35%, #a064f0 70%, #f0c060 100%);
+    background: linear-gradient(90deg, #6fc6e8 0%, #9fb6f0 35%, #d99ad0 70%, #f0c27a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #9fb6f0;
+    color: #9fb6f0; /* fallback for non-supporting browsers */
 }
 
 body.cover-page .cover-subtitle {
@@ -122,7 +122,7 @@ body.cover-page .cover-subtitle {
     letter-spacing: 0.01em;
 }
 
-/* Decorative separator + author byline */
+/* Decorative separator + author byline (LLMBook house style) */
 body.cover-page .cover-separator {
     margin: 1.6rem auto 1.1rem;
     display: flex;
@@ -193,13 +193,13 @@ body.cover-page .btn-amazon {
 
 body.cover-page .btn-start {
     color: #081120;
-    background: linear-gradient(120deg, #50c8b4 0%, #9fb6f0 55%, #f0c060 130%);
-    box-shadow: 0 6px 26px rgba(80, 200, 180, 0.28);
+    background: linear-gradient(120deg, #7fd0ec 0%, #b6c6f4 55%, #f0c27a 130%);
+    box-shadow: 0 6px 26px rgba(110, 180, 235, 0.28);
 }
 body.cover-page .btn-start:hover,
 body.cover-page .btn-start:focus {
     transform: translateY(-2px);
-    box-shadow: 0 10px 34px rgba(80, 200, 180, 0.4);
+    box-shadow: 0 10px 34px rgba(110, 180, 235, 0.4);
     color: #081120;
 }
 
@@ -212,18 +212,18 @@ body.cover-page .btn-contents:hover,
 body.cover-page .btn-contents:focus {
     color: #eaf3fa;
     border-color: rgba(150, 200, 235, 0.7);
-    background: rgba(80, 200, 180, 0.08);
+    background: rgba(110, 180, 235, 0.08);
 }
 
 body.cover-page .btn-amazon {
     color: #2a1a05;
-    background: linear-gradient(120deg, #f0c060 0%, #e6a030 100%);
-    box-shadow: 0 6px 26px rgba(240, 192, 96, 0.28);
+    background: linear-gradient(120deg, #f0c27a 0%, #e6a84e 100%);
+    box-shadow: 0 6px 26px rgba(230, 168, 78, 0.28);
 }
 body.cover-page .btn-amazon:hover,
 body.cover-page .btn-amazon:focus {
     transform: translateY(-2px);
-    box-shadow: 0 10px 34px rgba(240, 192, 96, 0.42);
+    box-shadow: 0 10px 34px rgba(230, 168, 78, 0.42);
     color: #2a1a05;
 }
 
@@ -282,13 +282,13 @@ body.cover-page .part-card:focus {
     box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
 }
 body.cover-page .part-card.part-1:hover,
-body.cover-page .part-card.part-1:focus { border-color: #50c8b4; }
+body.cover-page .part-card.part-1:focus { border-color: #6fd0cd; }
 body.cover-page .part-card.part-2:hover,
-body.cover-page .part-card.part-2:focus { border-color: #d9c46a; }
+body.cover-page .part-card.part-2:focus { border-color: #d9bd7a; }
 body.cover-page .part-card.part-3:hover,
-body.cover-page .part-card.part-3:focus { border-color: #a064f0; }
+body.cover-page .part-card.part-3:focus { border-color: #b3a2f5; }
 body.cover-page .part-card.part-4:hover,
-body.cover-page .part-card.part-4:focus { border-color: #e07860; }
+body.cover-page .part-card.part-4:focus { border-color: #ef9eb4; }
 
 body.cover-page .part-card .part-roman {
     font-family: 'Cinzel', Georgia, serif;
@@ -298,10 +298,10 @@ body.cover-page .part-card .part-roman {
     color: #7fd0ec;
     margin-bottom: 0.55rem;
 }
-body.cover-page .part-card.part-1 .part-roman { color: #50c8b4; }
-body.cover-page .part-card.part-2 .part-roman { color: #d9c46a; }
-body.cover-page .part-card.part-3 .part-roman { color: #a064f0; }
-body.cover-page .part-card.part-4 .part-roman { color: #e07860; }
+body.cover-page .part-card.part-1 .part-roman { color: #6fd0cd; }
+body.cover-page .part-card.part-2 .part-roman { color: #d9bd7a; }
+body.cover-page .part-card.part-3 .part-roman { color: #b3a2f5; }
+body.cover-page .part-card.part-4 .part-roman { color: #ef9eb4; }
 
 body.cover-page .part-card h3 {
     font-family: 'Cinzel', Georgia, serif;
@@ -328,12 +328,13 @@ body.cover-page .part-card .part-count {
     letter-spacing: 0.14em;
     color: rgba(150, 200, 235, 0.8);
 }
-body.cover-page .part-card.part-1 .part-count { color: #50c8b4; }
-body.cover-page .part-card.part-2 .part-count { color: #d9c46a; }
-body.cover-page .part-card.part-3 .part-count { color: #a064f0; }
-body.cover-page .part-card.part-4 .part-count { color: #e07860; }
+body.cover-page .part-card.part-1 .part-count { color: #6fd0cd; }
+body.cover-page .part-card.part-2 .part-count { color: #d9bd7a; }
+body.cover-page .part-card.part-3 .part-count { color: #b3a2f5; }
+body.cover-page .part-card.part-4 .part-count { color: #ef9eb4; }
 
 body.cover-page .series-section { padding: 3rem 0 1.5rem; }
+body.cover-page .series-section .part-grid { margin-top: 2.5rem; }
 body.cover-page .series-card { cursor: default; }
 body.cover-page .series-card:hover { transform: none; }
 body.cover-page .series-card .series-arc {
@@ -356,27 +357,27 @@ body.cover-page .series-card .series-links a {
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
 }
-body.cover-page .series-card.part-1 .series-links a { color: #50c8b4; }
-body.cover-page .series-card.part-2 .series-links a { color: #d9c46a; }
-body.cover-page .series-card.part-3 .series-links a { color: #a064f0; }
-body.cover-page .series-card.part-4 .series-links a { color: #e07860; }
+body.cover-page .series-card.part-1 .series-links a { color: #6fd0cd; }
+body.cover-page .series-card.part-2 .series-links a { color: #d9bd7a; }
+body.cover-page .series-card.part-3 .series-links a { color: #b3a2f5; }
+body.cover-page .series-card.part-4 .series-links a { color: #ef9eb4; }
 body.cover-page .series-card .series-links a:hover { border-bottom-color: #7fd0ec; }
-body.cover-page .series-card.part-1 .series-links a:hover { border-bottom-color: #50c8b4; }
-body.cover-page .series-card.part-2 .series-links a:hover { border-bottom-color: #d9c46a; }
-body.cover-page .series-card.part-3 .series-links a:hover { border-bottom-color: #a064f0; }
-body.cover-page .series-card.part-4 .series-links a:hover { border-bottom-color: #e07860; }
+body.cover-page .series-card.part-1 .series-links a:hover { border-bottom-color: #6fd0cd; }
+body.cover-page .series-card.part-2 .series-links a:hover { border-bottom-color: #d9bd7a; }
+body.cover-page .series-card.part-3 .series-links a:hover { border-bottom-color: #b3a2f5; }
+body.cover-page .series-card.part-4 .series-links a:hover { border-bottom-color: #ef9eb4; }
 body.cover-page .series-card .series-here {
     font-family: 'Cinzel', Georgia, serif;
     font-size: 0.74rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: rgba(150, 200, 235, 0.8);
+    color: #7fd0ec;
 }
-body.cover-page .series-card.part-1 .series-here { color: #50c8b4; }
-body.cover-page .series-card.part-2 .series-here { color: #d9c46a; }
-body.cover-page .series-card.part-3 .series-here { color: #a064f0; }
-body.cover-page .series-card.part-4 .series-here { color: #e07860; }
+body.cover-page .series-card.part-1 .series-here { color: #6fd0cd; }
+body.cover-page .series-card.part-2 .series-here { color: #d9bd7a; }
+body.cover-page .series-card.part-3 .series-here { color: #b3a2f5; }
+body.cover-page .series-card.part-4 .series-here { color: #ef9eb4; }
 body.cover-page .series-cta {
     text-align: center;
     margin-top: 1.6rem;
@@ -564,7 +565,7 @@ body.cover-page footer.cover-footer a:hover { color: #aedcf5; }
 <section aria-labelledby="series-heading" class="series-section">
 <h2 class="cover-section-title" id="series-heading">The Hands-On AI Science Series</h2>
 <p class="cover-section-sub">Building Agentic AI is one of nine connected books, each a deep, build-it-yourself guide to a major field of AI.</p>
-<p class="cover-promise" style="margin-top:0; margin-bottom:1.5rem;">Hands-On AI Science is a series of in-depth guides to the major fields of artificial intelligence. Every book goes deep into the theory, models, and internals, covering the classical foundations and the most recent ideas, then shows you how to build each one in Python with the modern libraries and tools that get the job done. The writing stays plain and light (illustrations, analogies, mental models, worked examples, and a little fun) without trading away rigor or coverage. Each volume is self-contained and complete enough to anchor a full course on its subject.</p>
+<p class="cover-promise" style="margin-top:0;">Hands-On AI Science is a series of in-depth guides to the major fields of artificial intelligence. Every book goes deep into the theory, models, and internals, covering the classical foundations and the most recent ideas, then shows you how to build each one in Python with the modern libraries and tools that get the job done. The writing stays plain and light (illustrations, analogies, mental models, worked examples, and a little fun) without trading away rigor or coverage. Each volume is self-contained and complete enough to anchor a full course on its subject.</p>
 <div class="part-grid">
 
 <div class="part-card series-card part-1">
